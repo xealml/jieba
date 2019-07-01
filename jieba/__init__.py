@@ -282,8 +282,8 @@ class Tokenizer(object):
             - cut_all: Model type. True for full pattern, False for accurate pattern.
             - HMM: Whether to use the Hidden Markov Model.
         '''
-        sentence = strdecode(sentence)
-
+        sentence = strdecode(sentence)  # 解码为unicode
+        # 不同模式下的正则
         if cut_all:
             re_han = re_han_cut_all
             re_skip = re_skip_cut_all
